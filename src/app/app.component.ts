@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import { TopMenu, ImageSlider } from './components';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -64,6 +64,53 @@ export class AppComponent {
     }
   ]
   
+  imageSliders: ImageSlider[] = [
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl: 'https://media.istockphoto.com/photos/breaking-news-3d-rendering-virtual-set-studio-picture-id1219965949?k=6&m=1219965949&s=612x612&w=0&h=DAVpuv8PXix6xCbD0J08AMqlO8NS1vPMml3ii4wO728=',
+      link: '',
+      caption: ''
+    }
+  ]
   handleTabSelected(topMenu: TopMenu) {
     console.log(topMenu)
   }
