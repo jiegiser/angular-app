@@ -3,22 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { ScrollableTabComponent } from './components';
-import { ImageSliderComponent } from './components/image-slider/image-slider.component';
-import { HorizontalGridComponent } from './components/horizontal-grid/horizontal-grid.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   // 该模块有哪些组件
   declarations: [
-    AppComponent,
-    ScrollableTabComponent,
-    ImageSliderComponent,
-    HorizontalGridComponent
+    AppComponent
   ],
   // 该模块依赖哪些模块
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   // 根模块显示的组件
