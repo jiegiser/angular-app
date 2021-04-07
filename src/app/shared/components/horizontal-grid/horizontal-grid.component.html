@@ -1,7 +1,14 @@
 <!-- <input type="text" [value]="username" (input)="username = $event.target.value">
 <span>{{username}}</span> -->
 
-<input type="text" [(ngModel)]="username">
+<!-- <input type="text" [(ngModel)]="username">
 <span>{{username}}</span>
 
-{{result}}
+<div (click)="handleClick()">
+  {{result}}
+</div> -->
+
+<div appGridItem *ngFor="let item of channels">
+  <img [src]="item.icon" alt="" appGridItemImage [fitMode]="'none'">
+  <span appGridItemTitle>{{item.title}}</span>
+</div>

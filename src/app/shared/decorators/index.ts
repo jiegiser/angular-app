@@ -18,3 +18,19 @@ export function Emoji() {
     })
   }
 }
+
+
+export function Confirmable(message: string) {
+  return (target: Object, key: string, descriptor: PropertyDescriptor) => {
+    const original = descriptor.value
+    descriptor.value = (...args: any) => {
+      const allow = window.confirm(message)
+      if (allow) {
+        const result = original.apply(this, args)
+        return result
+      }
+      return null
+    }
+    return descriptor
+  }
+}
