@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Confirmable, Emoji } from '../../decorators';
+import { Component, Input, OnInit } from '@angular/core';
 
 export interface Channel {
   id: number
@@ -14,22 +13,26 @@ export interface Channel {
   styleUrls: ['./horizontal-grid.component.css']
 })
 export class HorizontalGridComponent implements OnInit {
-  username = ''
+  @Input() cols = 8
+  @Input() displayCols = 5
+  sliderMargin = '0'
   constructor() { }
-  // 实现自定义注解
-  @Emoji() result = 'Hello'
-  channels: Channel[] = [{
-    id: 1,
-    title: '限时秒杀',
-    icon: '',
-    link: ''
-  }]
   ngOnInit(): void {
   }
 
-  @Confirmable('您确认要执行吗')
-  handleClick() {
-    console.log('点击执行')
+  get scrollable(): boolean {
+    return this.cols > this.displayCols
   }
 
+  get templateRows(): string {
+    return `minmax(auto, max-content)`
+  }
+
+  get templateColumns(): string {
+    return `repeat(${this.cols}, calc((100vw - ${this.displayCols * 0.4}rem)/${this.displayCols}))`
+  }
+
+  handleScroll(ev) {
+    this.sliderMargin = `0 ${100 * ev.target.scrollLeft / ev.target.scrollWidth}%`
+  }
 }

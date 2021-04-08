@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu, ImageSlider } from './shared/components';
+import { TopMenu, ImageSlider, Channel } from './shared/components';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -101,6 +101,13 @@ export class AppComponent {
       caption: ''
     }
   ]
+
+  channels: Channel[] = [{
+    id: 1,
+    title: '限时秒杀',
+    icon: '',
+    link: ''
+  }]
   handleTabSelected(topMenu: TopMenu) {
     console.log(topMenu)
   }
