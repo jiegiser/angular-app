@@ -1,4 +1,4 @@
-<app-scrollable-tab
+<!-- <app-scrollable-tab
   [menus]="topMenu"
   (tabSelected)="handleTabSelected($event)"
   titleColor="#fff"
@@ -14,4 +14,6 @@
     <img [src]="item.icon" alt="" appGridItemImage [fitMode]="'none'">
     <span appGridItemTitle>{{item.title}}</span>
   </div>
-</app-horizontal-grid>
+</app-horizontal-grid> -->
+
+<router-outlet></router-outlet>
