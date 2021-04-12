@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeContainerComponent, HomeDetailComponent } from './components';
+import { HomeContainerComponent, HomeDetailComponent, HomeGrandComponent } from './components';
 
 const routes: Routes = [
   {
@@ -21,7 +21,13 @@ const routes: Routes = [
          * 路径参数，看起来是 URL 的一部分
          */
         path: ':tabLink',
-        component: HomeDetailComponent
+        component: HomeDetailComponent,
+        children: [
+          {
+            path: 'grand',
+            component: HomeGrandComponent
+          }
+        ]
       }
     ]
   }

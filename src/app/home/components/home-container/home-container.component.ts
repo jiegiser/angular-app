@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TopMenu } from 'src/app/shared/components';
 
 @Component({
@@ -10,65 +11,84 @@ export class HomeContainerComponent implements OnInit {
   topMenu: TopMenu[] = [
     {
       title: '热门',
-      link: ''
+      link: 'hot',
+      id: 1
     }, {
       title: '男装',
-      link: ''
+      link: 'men',
+      id: 2
     }, {
       title: '手机',
-      link: ''
+      link: 'phone',
+      id: 3
     }, {
       title: '食品',
-      link: ''
+      link: 'food',
+      id: 4
     }, {
       title: '医药',
-      link: ''
+      link: 'yiyao',
+      id: 5
     }, {
       title: '运动',
-      link: ''
+      link: 'sport',
+      id: 6
     }, {
       title: '鞋包',
-      link: ''
+      link: 'xiebao',
+      id: 7
     }, {
       title: '家装',
-      link: ''
+      link: 'jiazhuang',
+      id: 8
     }, {
       title: '水果',
-      link: ''
+      link: 'shuiguo',
+      id: 9
     }, {
       title: '电器',
-      link: ''
+      link: 'dianqi',
+      id: 10
     }, {
       title: '车品',
-      link: ''
+      link: 'cheping',
+      id: 11
     }, {
       title: '美妆',
-      link: ''
+      link: 'meizhuang',
+      id: 12
     }, {
       title: '手机',
-      link: ''
+      link: 'shouji',
+      id: 13
     }, {
       title: '电脑',
-      link: ''
+      link: 'diannao',
+      id: 14
     }, {
       title: '海淘',
-      link: ''
+      link: 'haitao',
+      id: 15
     }, {
       title: '饰品',
-      link: ''
+      link: 'shiping',
+      id: 16
     }, {
       title: '玩乐',
-      link: ''
+      link: 'wanle',
+      id: 17
     }, {
       title: '母婴',
-      link: ''
+      link: 'muyin',
+      id: 18
     }
   ]
-  constructor() { }
+  route: any;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
   handleTabSelected(topMenu: TopMenu) {
-    console.log(topMenu)
+    this.router.navigate(['home', topMenu.link])
   }
 }
