@@ -52,5 +52,6 @@ export class HomeGrandComponent implements OnInit {
     // 获取
     console.log(injector.get(Product))
     console.log(injector.get(PurchaseOrder))
+    console.log(injector.get(token))
   }
 }
