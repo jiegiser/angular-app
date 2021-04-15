@@ -1,3 +1,6 @@
 <span [textContent]="title"></span>
-
+<span [textContent]="time | date: 'HH:mm:ss:SSS'"></span>
+<span #timeRef></span>
+<span>{{str}}</span>
+<button (click)="handleClick()">触发脏值检测</button>
 <p>child works!</p>
