@@ -19,6 +19,9 @@ export class HomeDetailComponent implements OnInit {
       this.selectedTabLink = params.get('tabLink')
     })
     this.imageSliders = this.service.getBanners()
+    // this.service.getBanners().subscribe(tabs => {
+    //   this.imageSliders = tabs
+    // })
     this.channels = this.service.getChannels()
   }
 

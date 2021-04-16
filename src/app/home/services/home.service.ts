@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Channel, ImageSlider, TopMenu } from 'src/app/shared/components';
+import { environment } from 'src/environments/environment';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -240,7 +242,9 @@ export class HomeService {
     icon: 'https://img.pddpic.com/goods/2020-01-14/b39df4af9b17ba0d063c04da0aea85aa.png?imageView2/2/w/117/q/80/format/webp',
     link: ''
   }]
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   getTabs() {
     return this.topMenu
@@ -252,5 +256,10 @@ export class HomeService {
 
   getBanners() {
     return this.imageSliders
+    // return this.http.get<ImageSlider[]>(`${environment.baseUrl}/banners`, {
+    //   params: {
+    //     iCode: environment.icode
+    //   }
+    // })
   }
 }
