@@ -17,3 +17,7 @@
 </app-horizontal-grid> -->
 
 <router-outlet></router-outlet>
+<app-footer
+  (tabSelected)="handleTabSelect($event)"
+  [selectedIndex]="selectedIndex$ | async"
+></app-footer>

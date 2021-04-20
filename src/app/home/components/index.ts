@@ -1,5 +1,5 @@
 export * from './home-container'
 export * from './home-detail'
-export * from './home-grand'
+// export * from './home-grand'
 export * from './pipes'
-export * from './parent'
+// export * from './parent'

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HorizontalGridComponent, ImageSliderComponent, ScrollableTabComponent, CountDownComponent } from './components';
+import { HorizontalGridComponent, ImageSliderComponent, ScrollableTabComponent, CountDownComponent, FooterComponent } from './components';
 import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } from './directives';
-
 
 
 @NgModule({
@@ -14,7 +13,8 @@ import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } fro
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
-    CountDownComponent
+    CountDownComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +26,8 @@ import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } fro
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
+    CountDownComponent,
+    FooterComponent,
     // 导出指令，其他模块也可以使用
     GridItemDirective,
     GridItemImageDirective,
